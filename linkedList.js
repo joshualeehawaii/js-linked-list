@@ -33,8 +33,17 @@ function linkedListGenerator(){
 
   //get(Number)
   function get(number){
-
+    var currentNode = head;
+    for(i = 0; i < number.length; i++){
+      if(currentNode.next === null){
+        return false;
+      } else {
+        currentNode = currentNode.next;
+      }
+      return currentNode;
+    }
   }
+
   //remove(Number)
   function remove(){
 
