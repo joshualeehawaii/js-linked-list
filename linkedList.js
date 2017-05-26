@@ -50,12 +50,37 @@ function linkedListGenerator(){
   }
 
   //remove(Number)
-  //Current, Previous, and Next nodes are the key to this
+  //current, previous, and next nodes are the key to this
   function remove(number){
     var previousNode = get(number - 1);
+    var nextNode = get(number + 1);
     var currentNode = get(number);
 
-  }
+    console.log('current node = ',currentNode.value);
+    console.log('previous node = ', previousNode.value);
+    console.log('needs removed = ',number);
+    console.log('new connection = ', nextNode.value);
+    console.log('head = ', head.value);
+    console.log('tail = ', tail.value);
+
+
+    //If the list does not contain the number, return false
+    if (currentNode === false){
+      return false;
+    }
+    //If number is equal to 0, set the head to the next in the list
+    if (number === 0){
+      head = nextNode;
+      return;
+    }
+    if (currentNode.next === null){
+      previousNode.next = null;
+      tail = previousNode;
+      } else {
+        previousNode.next = nextNode;
+        tail = nextNode;
+      }
+    }
 
   //insert(Value,Number)
   function insert(){
