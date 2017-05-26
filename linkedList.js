@@ -42,7 +42,7 @@ function linkedListGenerator(){
          return false;
        } else {
         currentNode = currentNode.next;
-        //console.log('current node =', currentNode);
+        //console.log('current node = ', currentNode);
        }
     }
     //console.log(currentNode);
@@ -56,12 +56,12 @@ function linkedListGenerator(){
     var nextNode = get(number + 1);
     var currentNode = get(number);
 
-    console.log('current node = ',currentNode.value);
-    console.log('previous node = ', previousNode.value);
-    console.log('needs removed = ',number);
-    console.log('new connection = ', nextNode.value);
-    console.log('head = ', head.value);
-    console.log('tail = ', tail.value);
+    //console.log('current node = ',currentNode.value);
+    // console.log('previous node = ', previousNode.value);
+    // console.log('needs removed = ',number);
+    // console.log('new connection = ', nextNode.value);
+    // console.log('head = ', head.value);
+    // console.log('tail = ', tail.value);
 
 
     //If the list does not contain the number, return false
@@ -83,7 +83,31 @@ function linkedListGenerator(){
     }
 
   //insert(Value,Number)
-  function insert(){
+  function insert(value, number){
+    console.log('number = ',number);
+    console.log('value = ', value);
+
+    var previousNode = get(number - 1);
+    var nextNode = get(number + 1);
+    var currentNode = get(number);
+
+    console.log('previous node = ',previousNode.value);
+    console.log('next node = ', nextNode.value);
+    console.log('currentNode = ', currentNode.value);
+
+    if (number === 0){
+      head = currentNode;
+    }
+    for (var i = 0; i < number; i++){
+
+      console.log('***previous node next = ', previousNode.next);
+      previousNode.next = currentNode;
+
+      console.log('***current node next = ', currentNode.next);
+      currentNode.next = nextNode;
+    }
+
+
 
   }
   return {
