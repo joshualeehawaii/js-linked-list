@@ -56,12 +56,12 @@ function linkedListGenerator(){
     var nextNode = get(number + 1);
     var currentNode = get(number);
 
-    // console.log('current node = ',currentNode.value);
-    // console.log('previous node = ', previousNode.value);
-    // console.log('needs removed = ',number);
-    // console.log('new connection = ', nextNode.value);
-    // console.log('head = ', head.value);
-    // console.log('tail = ', tail.value);
+    console.log('*** current node = ',currentNode.value);
+    console.log('*** previous node = ', previousNode.value);
+    console.log('*** needs removed = ',number);
+    console.log('*** new connection = ', nextNode.value);
+    console.log('*** head = ', head.value);
+    console.log('*** tail = ', tail.value);
 
 
     //If the list does not contain the number, return false
